@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Garame</string>
+    <string name="garamin_copyright_its_2021">Garamin Copyright ITS 2021</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buat_akun">BUAT AKUN!</string>
+    <string name="nama">Nama</string>
+    <string name="nik">NIK</string>
+    <string name="kota_kabupaten">Kota/Kabupaten</string>
+    <string name="kecamatan">Kecamatan</string>
+    <string name="koperasi">Koperasi</string>
+    <string name="nomor_telepon">Nomor Telepon</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="konfirmasi_kata_sandi">Konfirmasi Kata Sandi</string>
+    <string name="buat_akun_lower">Buat Akun</string>
+    <string name="email">Email</string>
+    <string name="lorem">Garamin membantu Anda dalam lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eleifend, metus sit amet vehicula bibendum, quam urna fermentum nunc, cursus porta felis magna eget lacus. Nulla fermentum pharetra felis ut dictum. Donec id odio quam. </string>
 </resources>

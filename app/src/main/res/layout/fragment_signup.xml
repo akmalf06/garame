@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.auth.signup.SignupFragment">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="182dp"
+                android:background="@drawable/view_signup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/buat_akun"
+                android:textColor="@color/white"
+                android:textSize="33sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:lines="3"
+                android:layout_marginStart="42dp"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:text="Buat akun untuk menikmati \nfitur-fitur dari aplikasi \nGaramin!"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <EditText
+            android:id="@+id/edt_nama"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_round"
+            android:hint="@string/nama"
+            tools:ignore="RtlSymmetry"
+            android:paddingStart="11dp"
+            android:inputType="text"
+            style="@style/custom_input"/>
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_round"
+            android:hint="@string/email"
+            style="@style/custom_input"
+            android:paddingStart="11dp"
+            android:inputType="textEmailAddress"
+            tools:ignore="RtlSymmetry"/>
+
+
+        <EditText
+            android:id="@+id/edt_kota"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_round"
+            android:hint="@string/kota_kabupaten"
+            style="@style/custom_input"
+            android:paddingStart="11dp"
+            android:inputType="text"
+            tools:ignore="RtlSymmetry"/>
+
+        <EditText
+            android:id="@+id/edt_kecamatan"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_round"
+            android:hint="@string/kecamatan"
+            style="@style/custom_input"
+            android:paddingStart="11dp"
+            android:inputType="text"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/edt_koperasi"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_round"
+            android:hint="@string/koperasi"
+            style="@style/custom_input"
+            android:paddingStart="11dp"
+            android:inputType="text"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/edt_hp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_round"
+            android:hint="@string/nomor_telepon"
+            style="@style/custom_input"
+            android:paddingStart="11dp"
+            android:inputType="numberDecimal"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_round"
+            android:hint="@string/kata_sandi"
+            style="@style/custom_input"
+            android:paddingStart="11dp"
+            android:inputType="textPassword"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/edt_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_round"
+            android:hint="@string/konfirmasi_kata_sandi"
+            style="@style/custom_input"
+            android:paddingStart="11dp"
+            android:inputType="textPassword"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/buat_akun_lower"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="@drawable/round_bg"
+            android:layout_marginTop="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/garamin_copyright_its_2021"
+            android:textColor="#4654B7"
+            android:textSize="10sp"
+            android:layout_marginTop="87dp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginBottom="20dp"
+            tools:ignore="SmallSp" />
+
+
+    </LinearLayout>
+
+</ScrollView>
