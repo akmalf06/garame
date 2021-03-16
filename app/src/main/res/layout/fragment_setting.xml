@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".view.setting.SettingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:background="@drawable/view_signup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="27dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/pengaturan"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="42dp"
+        android:paddingEnd="42dp"
+        android:layout_marginTop="34dp"
+        android:orientation="vertical"
+        tools:ignore="RtlSymmetry">
+
+        <Button
+            android:id="@+id/btn_ubah_bahasa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_outline"
+            android:text="Ubah Bahasa"
+            android:textColor="@color/main_color"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btn_ubah_identitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_outline"
+            android:text="Ubah Identitas"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="16dp"
+            android:textAllCaps="false"/>
+
+
+        <Button
+            android:id="@+id/btn_ubah_koperasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_outline"
+            android:text="Ubah Koperasi"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="16dp"
+            android:textAllCaps="false"/>
+
+
+        <Button
+            android:id="@+id/btn_tutup_akun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_outline"
+            android:text="Tutup AKun"
+            android:textColor="@color/main_color"
+            android:layout_marginTop="68dp"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -11,16 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Garame">
-        <activity android:name=".view.more.WelocomeActivity"></activity>
-        <activity android:name=".view.auth.AuthActivity">
+        <activity android:name=".view.setting.SettingActivity"></activity>
+        <activity android:name=".view.more.WelocomeActivity" />
+        <activity android:name=".view.auth.AuthActivity"></activity>
+        <activity android:name=".view.more.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.more.SplashActivity" />
-        <activity android:name=".view.MainActivity"></activity>
+        <activity android:name=".view.MainActivity">
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
