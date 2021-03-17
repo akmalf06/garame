@@ -1,4 +1,4 @@
-package com.hackathon.garame.view
+package com.hackathon.garame.UI
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -7,9 +7,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.hackathon.garame.R
 import com.hackathon.garame.databinding.ActivityMainBinding
 import com.hackathon.garame.util.addFragment
-import com.hackathon.garame.view.edukasi.EdukasiFragment
-import com.hackathon.garame.view.finance.FinanceFragment
-import com.hackathon.garame.view.home.HomeFragment
+import com.hackathon.garame.UI.edukasi.EdukasiFragment
+import com.hackathon.garame.UI.finance.FinanceFragment
+import com.hackathon.garame.UI.home.HomeFragment
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -21,8 +21,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         setContentView(binding.root)
 
         val fragment = HomeFragment()
-        val manager = supportFragmentManager
-        addFragment(fragment, manager)
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.frame_main, fragment, fragment::class.java.simpleName)
+            commit()
+        }
 
         binding.navBottom.setOnNavigationItemSelectedListener(this)
     }

@@ -6,7 +6,7 @@
         <item name="colorPrimaryVariant">@color/main_color</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondary">@color/main_color</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
@@ -27,7 +27,13 @@
     <style name="home_menu">
         <item name="fontFamily">@font/poppins_bold</item>
         <item name="android:textSize">17sp</item>
-        <item name="thumbColor">@color/white</item>
+        <item name="thumbColor">#80000000</item>
+    </style>
+
+    <style name="text_pembayaran">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="thumbColor">#B3000000</item>
     </style>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.hackathon.garame.view.setting
+package com.hackathon.garame.UI.setting.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.hackathon.garame.R
+import com.hackathon.garame.UI.setting.fragment.KoperasiFragment
 import com.hackathon.garame.databinding.FragmentSettingBinding
 import com.hackathon.garame.util.addFragmentSetting
 
@@ -30,6 +30,8 @@ class SettingFragment : Fragment(), View.OnClickListener {
         binding.btnUbahIdentitas.setOnClickListener(this)
         binding.btnUbahKoperasi.setOnClickListener(this)
         binding.btnTutupAkun.setOnClickListener(this)
+        binding.btnTentang.setOnClickListener(this)
+        binding.imgBack.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -48,8 +50,18 @@ class SettingFragment : Fragment(), View.OnClickListener {
                 activity?.addFragmentSetting(fragment, manager)
             }
 
+            binding.btnTentang -> {
+                val fragment = TentangFragment()
+                val manager = activity?.supportFragmentManager
+                activity?.addFragmentSetting(fragment, manager)
+            }
+
             binding.btnTutupAkun -> {
 
+            }
+
+            binding.imgBack -> {
+                activity?.onBackPressed()
             }
         }
     }

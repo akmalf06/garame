@@ -1,14 +1,12 @@
-package com.hackathon.garame.view.setting
+package com.hackathon.garame.UI.setting
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.hackathon.garame.R
+import com.hackathon.garame.UI.setting.fragment.SettingFragment
 import com.hackathon.garame.databinding.ActivitySettingBinding
-import com.hackathon.garame.util.addFragment
-import com.hackathon.garame.util.addFragmentSetting
-import kotlinx.android.synthetic.main.activity_setting.view.*
 
 class SettingActivity : AppCompatActivity() {
 

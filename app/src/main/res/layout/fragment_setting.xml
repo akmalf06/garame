@@ -5,13 +5,14 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".view.setting.SettingFragment">
+    tools:context=".UI.setting.fragment.SettingFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <View
+            android:id="@+id/view2"
             android:layout_width="match_parent"
             android:layout_height="132dp"
             android:background="@drawable/view_signup"
@@ -19,18 +20,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/back_button"
+            app:layout_constraintBottom_toBottomOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="27dp"
             android:fontFamily="@font/poppins_bold"
-            android:text="@string/pengaturan"
+            android:text="Pengaturan"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="60dp"
             android:textColor="@color/white"
-            android:textSize="32sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view2"
+            app:layout_constraintStart_toEndOf="@+id/img_back"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -45,46 +58,175 @@
         android:orientation="vertical"
         tools:ignore="RtlSymmetry">
 
-        <Button
+        <LinearLayout
             android:id="@+id/btn_ubah_bahasa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_outline"
-            android:text="Ubah Bahasa"
-            android:textColor="@color/main_color"
-            android:textAllCaps="false"/>
+            android:orientation="horizontal">
 
-        <Button
+            <androidx.cardview.widget.CardView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                android:outlineSpotShadowColor="@color/grey_input"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_outline_bubble_chart_24"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"
+                android:text="Ubah Bahasa"
+                android:textColor="#B3000000"
+                android:layout_marginStart="26dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/btn_ubah_identitas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_outline"
-            android:text="Ubah Identitas"
-            android:textColor="@color/main_color"
-            android:layout_marginTop="16dp"
-            android:textAllCaps="false"/>
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                app:cardCornerRadius="10dp">
 
-        <Button
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_setting_user"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"
+                android:text="Ubah Identitas"
+                android:textColor="#B3000000"
+                android:layout_marginStart="26dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/btn_ubah_koperasi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_outline"
-            android:text="Ubah Koperasi"
-            android:textColor="@color/main_color"
-            android:layout_marginTop="16dp"
-            android:textAllCaps="false"/>
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                app:cardCornerRadius="10dp">
 
-        <Button
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_outline_home_24"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"
+                android:text="Ubah Koperasi"
+                android:textColor="#B3000000"
+                android:layout_marginStart="26dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_tentang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_widgeds"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"
+                android:text="Tentang Aplikasi"
+                android:textColor="#B3000000"
+                android:layout_marginStart="26dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/btn_tutup_akun"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_outline"
-            android:text="Tutup AKun"
-            android:textColor="@color/main_color"
-            android:layout_marginTop="68dp"
-            android:textAllCaps="false"/>
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_gravity="center"
+                app:cardCornerRadius="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_block"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:textSize="16sp"
+                android:text="Tutup Akun"
+                android:textColor="#B3000000"
+                android:layout_marginStart="26dp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

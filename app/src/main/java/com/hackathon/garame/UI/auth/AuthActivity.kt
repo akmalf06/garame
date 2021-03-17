@@ -1,11 +1,11 @@
-package com.hackathon.garame.view.auth
+package com.hackathon.garame.UI.auth
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.hackathon.garame.R
 import com.hackathon.garame.databinding.ActivityAuthBinding
-import com.hackathon.garame.view.auth.signup.SignupFragment
+import com.hackathon.garame.UI.auth.signup.SignupFragment
 
 class AuthActivity : AppCompatActivity() {
 

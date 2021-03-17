@@ -1,4 +1,4 @@
-package com.hackathon.garame.view.more
+package com.hackathon.garame.UI.more
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

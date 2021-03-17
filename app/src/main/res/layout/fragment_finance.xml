@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.finance.FinanceFragment">
+    tools:context=".UI.finance.FinanceFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,17 +15,16 @@
         android:layout_marginBottom="16dp"
         tools:ignore="RtlSymmetry">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="27dp">
 
             <LinearLayout
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginEnd="50dp">
+                android:layout_alignParentStart="true">
 
                 <TextView
                     android:id="@+id/tv_nama"
@@ -49,12 +48,13 @@
 
             <ImageView
                 android:id="@+id/btn_setting"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
                 android:layout_gravity="center"
-                android:background="@drawable/setting_bg"/>
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/settings_bg"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

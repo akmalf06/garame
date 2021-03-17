@@ -1,11 +1,11 @@
-package com.hackathon.garame.view.more
+package com.hackathon.garame.UI.more
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.hackathon.garame.databinding.ActivitySplashBinding
-import com.hackathon.garame.view.MainActivity
+import com.hackathon.garame.UI.MainActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -18,6 +18,9 @@ class SplashActivity : AppCompatActivity() {
 
         Handler().postDelayed(Runnable {
             startActivity(Intent(this, MainActivity::class.java))
+
+            finish()
+
         }, 2000)
     }
 }

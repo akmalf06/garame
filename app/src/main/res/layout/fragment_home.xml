@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".view.home.HomeFragment">
+    tools:context=".UI.home.HomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,17 +14,16 @@
         android:paddingStart="32dp"
         android:paddingEnd="32dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="27dp">
 
             <LinearLayout
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginEnd="50dp">
+                android:layout_alignParentStart="true">
 
                 <TextView
                     android:id="@+id/tv_nama"
@@ -48,12 +47,13 @@
 
             <ImageView
                 android:id="@+id/btn_setting"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
                 android:layout_gravity="center"
-                android:background="@drawable/setting_bg"/>
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/settings_bg"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -89,191 +89,196 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Untuk Anda"
+            android:text="Info Koperasi Untuk Anda"
             android:fontFamily="@font/poppins_semibold"
-            android:textSize="12sp"
+            android:textColor="#B3000000"
+            android:textSize="14sp"
             android:layout_marginTop="16dp"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:background="@drawable/card_bg">
+            android:background="@drawable/sett_shadow"
+            app:cardCornerRadius="10dp"
+            android:elevation="0dp"
+            tools:targetApi="p">
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Stok\nTersedia"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
-                style="@style/home_menu"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/stok"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="16dp"
-                style="@style/home_menu"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.91"
-                app:layout_constraintStart_toEndOf="@+id/textView2"
-                tools:text="50 ton++" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stok\nTersedia"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    style="@style/home_menu"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/stok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="end"
+                    style="@style/home_menu"
+                    tools:text="50 ton++"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="38dp"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:background="@drawable/card_bg">
+            android:background="@drawable/sett_shadow"
+            app:cardCornerRadius="10dp"
+            android:elevation="0dp"
+            tools:targetApi="p">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Harga\nGaram"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="12dp"
-                style="@style/home_menu"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tv_harga"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="16dp"
-                style="@style/home_menu"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.91"
-                app:layout_constraintStart_toEndOf="@+id/textView3"
-                tools:text="Rp8.788/Kg" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Harga\nGaram"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="12dp"
+                    style="@style/home_menu" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_harga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/home_menu"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="38dp"
+                    tools:text="Rp8.788/Kg" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:background="@drawable/card_bg">
+            android:background="@drawable/sett_shadow"
+            app:cardCornerRadius="10dp"
+            android:elevation="0dp"
+            tools:targetApi="p">
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kas\nKoperasi"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="12dp"
-                style="@style/home_menu"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tv_kas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="16dp"
-                style="@style/home_menu"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.91"
-                app:layout_constraintStart_toEndOf="@+id/textView4"
-                tools:text="Rp54.789.100" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kas\nKoperasi"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="12dp"
+                    style="@style/home_menu" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_kas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/home_menu"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="38dp"
+                    tools:text="Rp54.789.100" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:background="@drawable/card_bg">
+            android:background="@drawable/sett_shadow"
+            app:cardCornerRadius="10dp"
+            android:elevation="0dp"
+            tools:targetApi="p">
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Masuk\nKoperasi"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="12dp"
-                style="@style/home_menu"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tv_masuk_koperasi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="16dp"
-                style="@style/home_menu"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.91"
-                app:layout_constraintStart_toEndOf="@+id/textView5"
-                tools:text="Rp34.120.300" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masuk\nKoperasi"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="12dp"
+                    style="@style/home_menu" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_masuk_kop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/home_menu"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="38dp"
+                    tools:text="Rp34.120.300" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            android:layout_marginBottom="28dp"
-            android:background="@drawable/card_bg">
+            android:background="@drawable/sett_shadow"
+            app:cardCornerRadius="10dp"
+            android:elevation="0dp"
+            android:layout_marginBottom="14dp"
+            tools:targetApi="p">
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Keluar\nKoperasi"
-                android:layout_marginStart="14dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="12dp"
-                style="@style/home_menu"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tv_keluar_koperasi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="16dp"
-                style="@style/home_menu"
-                android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.91"
-                app:layout_constraintStart_toEndOf="@+id/textView6"
-                tools:text="Rp18.987.000" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keluar\nKoperasi"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="12dp"
+                    style="@style/home_menu" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/tv_keluar_kop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/home_menu"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="38dp"
+                    tools:text="Rp18.987.000" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 

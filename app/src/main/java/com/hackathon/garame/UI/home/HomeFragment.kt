@@ -1,4 +1,4 @@
-package com.hackathon.garame.view.home
+package com.hackathon.garame.UI.home
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.hackathon.garame.databinding.FragmentHomeBinding
-import com.hackathon.garame.view.setting.SettingActivity
+import com.hackathon.garame.UI.setting.SettingActivity
 
 class HomeFragment : Fragment(), View.OnClickListener {
 

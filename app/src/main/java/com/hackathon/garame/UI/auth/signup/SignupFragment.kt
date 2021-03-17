@@ -1,4 +1,4 @@
-package com.hackathon.garame.view.auth.signup
+package com.hackathon.garame.UI.auth.signup
 
 import android.os.Bundle
 import android.view.LayoutInflater

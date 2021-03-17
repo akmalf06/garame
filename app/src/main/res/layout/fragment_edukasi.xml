@@ -1,52 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".view.edukasi.EdukasiFragment">
+    tools:context=".UI.edukasi.EdukasiFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:paddingStart="32dp"
-        android:paddingEnd="32dp"
-        android:layout_marginTop="27dp">
+        android:paddingEnd="32dp">
 
-        <LinearLayout
-            android:layout_width="240dp"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginEnd="50dp">
+            android:layout_marginTop="27dp">
+
+            <LinearLayout
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:id="@+id/tv_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Moh. Ashari"
+                    android:lines="1"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/main_color"/>
+
+                <TextView
+                    android:id="@+id/tv_koperasi_nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Koperasi Garamasin"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppins_bold"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btn_setting"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/settings_bg"/>
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/card_bg">
 
             <TextView
-                android:id="@+id/tv_nama"
-                android:layout_width="match_parent"
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Moh. Ashari"
-                android:lines="1"
-                android:textSize="20sp"
+                android:text="Edukasi\nPetani Garam"
+                android:layout_marginStart="14dp"
                 android:fontFamily="@font/poppins_bold"
-                android:textColor="@color/main_color"/>
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_koperasi_nama"
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Koperasi Garamasin"
-                android:textSize="13sp"
-                android:fontFamily="@font/poppins_bold"/>
+                android:src="@drawable/dashboard_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/btn_setting"
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_gravity="center"
-            android:src="@drawable/setting_bg"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Info Garam Untuk Anda"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/list_edukasi"
+            android:layout_marginBottom="18dp"/>
 
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

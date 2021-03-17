@@ -1,4 +1,4 @@
-package com.hackathon.garame.view.finance
+package com.hackathon.garame.UI.edukasi
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,17 +6,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.hackathon.garame.R
-import com.hackathon.garame.databinding.FragmentFinanceBinding
-import com.hackathon.garame.view.setting.SettingActivity
+import com.hackathon.garame.databinding.FragmentEdukasiBinding
+import com.hackathon.garame.UI.setting.SettingActivity
 
-class FinanceFragment : Fragment(), View.OnClickListener {
+class EdukasiFragment : Fragment(), View.OnClickListener {
 
-    private lateinit var _binding: FragmentFinanceBinding
+    private lateinit var _binding : FragmentEdukasiBinding
     private val binding get() = _binding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        _binding = FragmentFinanceBinding.inflate(layoutInflater)
+        _binding = FragmentEdukasiBinding.inflate(layoutInflater)
         return binding.root
     }
 
